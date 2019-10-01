@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_Recognition_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-gg-hJj">
+                                <rect key="frame" x="16" y="40" width="343" height="466"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tYy-As-foD">
+                                <rect key="frame" x="16" y="516" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abZ-7r-hlN">
+                                <rect key="frame" x="139.5" y="580" width="96" height="30"/>
+                                <state key="normal" title="Select picture"/>
+                                <connections>
+                                    <action selector="selectBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsV-wn-GoN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="abZ-7r-hlN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4M8-jc-RRE"/>
+                            <constraint firstItem="tYy-As-foD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ALg-x9-3Am"/>
+                            <constraint firstAttribute="trailing" secondItem="HCl-gg-hJj" secondAttribute="trailing" constant="16" id="M8n-BU-jsL"/>
+                            <constraint firstItem="HCl-gg-hJj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="U1J-nK-QoM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tYy-As-foD" secondAttribute="trailing" constant="16" id="Wko-kx-iSs"/>
+                            <constraint firstItem="HCl-gg-hJj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="ZIw-zv-6aj"/>
+                            <constraint firstItem="tYy-As-foD" firstAttribute="top" secondItem="HCl-gg-hJj" secondAttribute="bottom" constant="10" id="dlf-2Q-DGm"/>
+                            <constraint firstItem="abZ-7r-hlN" firstAttribute="top" secondItem="tYy-As-foD" secondAttribute="bottom" constant="14" id="mLf-5N-wUZ"/>
+                            <constraint firstItem="HCl-gg-hJj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uKd-cX-Flu"/>
+                            <constraint firstItem="tYy-As-foD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y30-z7-SpM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="predictionScoreText" destination="tYy-As-foD" id="pgV-OW-dae"/>
+                        <outlet property="selectedImage" destination="HCl-gg-hJj" id="hAD-zQ-5Ph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
