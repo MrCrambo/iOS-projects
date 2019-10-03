@@ -12,3 +12,13 @@ Online image recognition with ResNet50 pretrained model using device camera. Cou
 Image recognition with ResNet50 model on photos chosen using picker(with camera and photo library). Predicted results is better than in first app. Also used auto layout with constraints for UI.
 
 <img src="https://user-images.githubusercontent.com/14878297/65996738-af645800-e4a0-11e9-8ac1-d5de83deedd7.jpeg" width="240" height="400" />
+
+### 3. Face Detection using Flask server
+
+This app allows you to choose photo using Instagram like image picker and send photo to Flask server where it will find similar actor from real world using facial landmarks.
+
+Flask server with `dlib` library to find 68 landmarks on face and with more than 16000 actors in database. To find most similar actor I used KD-Tree. 
+
+There is no code to Flask server and no link to server on app code.
+
+<img width="291" alt="Снимок экрана 2019-10-03 в 13 37 51" src="https://user-images.githubusercontent.com/14878297/66120365-5f41de80-e5e3-11e9-9dcd-74ec060894ec.png">
