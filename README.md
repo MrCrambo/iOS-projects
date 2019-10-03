@@ -1,5 +1,5 @@
 # iOS-projects
- Applications for iOS devices using Machine Learning and Augmented Reality
+ Applications for iOS devices using Machine Learning, Augmented Reality and Computer Vision
 
 ## 1. Online Image Recognition
 
