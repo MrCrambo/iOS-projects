@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceDetecting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="12i-aY-gWI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5Vx-tx-Tfb">
+                                <rect key="frame" x="0.0" y="60" width="414" height="836"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDl-1m-rFX">
+                                <rect key="frame" x="143" y="786" width="128" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Choose a photo"/>
+                                <connections>
+                                    <action selector="choosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZNo-Gn-DmJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="card_back" translatesAutoresizingMaskIntoConstraints="NO" id="sqi-QB-g66">
+                                <rect key="frame" x="36" y="184" width="342" height="495"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kJ-xI-9dJ">
+                                <rect key="frame" x="16" y="727" width="382" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2kJ-xI-9dJ" firstAttribute="leading" secondItem="V7I-JR-G8F" secondAttribute="leading" constant="16" id="0cF-DR-qen"/>
+                            <constraint firstItem="V7I-JR-G8F" firstAttribute="bottom" secondItem="KDl-1m-rFX" secondAttribute="bottom" constant="42" id="3zj-9z-gEk"/>
+                            <constraint firstItem="sqi-QB-g66" firstAttribute="top" secondItem="12i-aY-gWI" secondAttribute="topMargin" constant="140" id="4lQ-lu-a2i"/>
+                            <constraint firstItem="5Vx-tx-Tfb" firstAttribute="top" secondItem="V7I-JR-G8F" secondAttribute="top" constant="16" id="7Hv-cE-jmt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sqi-QB-g66" secondAttribute="trailing" constant="16" id="95U-iq-c4x"/>
+                            <constraint firstItem="sqi-QB-g66" firstAttribute="centerX" secondItem="12i-aY-gWI" secondAttribute="centerX" id="ZZQ-6L-BQu"/>
+                            <constraint firstAttribute="trailing" secondItem="5Vx-tx-Tfb" secondAttribute="trailing" id="c2X-RI-qS4"/>
+                            <constraint firstItem="5Vx-tx-Tfb" firstAttribute="leading" secondItem="12i-aY-gWI" secondAttribute="leading" id="cNH-wm-PCy"/>
+                            <constraint firstItem="2kJ-xI-9dJ" firstAttribute="centerX" secondItem="12i-aY-gWI" secondAttribute="centerX" id="dbd-Oc-djC"/>
+                            <constraint firstItem="KDl-1m-rFX" firstAttribute="centerX" secondItem="12i-aY-gWI" secondAttribute="centerX" id="lLK-kF-3OL"/>
+                            <constraint firstItem="sqi-QB-g66" firstAttribute="leading" secondItem="12i-aY-gWI" secondAttribute="leadingMargin" constant="16" id="rDj-jI-oAn"/>
+                            <constraint firstItem="V7I-JR-G8F" firstAttribute="trailing" secondItem="2kJ-xI-9dJ" secondAttribute="trailing" constant="16" id="shQ-5g-D5Z"/>
+                            <constraint firstItem="2kJ-xI-9dJ" firstAttribute="top" secondItem="sqi-QB-g66" secondAttribute="bottom" constant="48" id="smE-Qb-ltE"/>
+                            <constraint firstItem="KDl-1m-rFX" firstAttribute="top" secondItem="2kJ-xI-9dJ" secondAttribute="bottom" constant="36" id="tJ8-DX-FwS"/>
+                            <constraint firstAttribute="bottom" secondItem="5Vx-tx-Tfb" secondAttribute="bottom" id="wJN-Xp-0px"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V7I-JR-G8F"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="sqi-QB-g66" id="LMz-p7-vx2"/>
+                        <outlet property="textView" destination="2kJ-xI-9dJ" id="UjR-u5-ymg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="375" height="667"/>
+        <image name="card_back" width="1920" height="2560"/>
+    </resources>
+</document>

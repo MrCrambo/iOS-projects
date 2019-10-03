@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.0.0-rc.2)
+  - PryntTrimmerView (4.0.0)
+  - SteviaLayout (4.6.0)
+  - YPImagePicker (4.1.2):
+    - PryntTrimmerView (~> 4.0.0)
+    - SteviaLayout (~> 4.6.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-rc.2)
+  - YPImagePicker
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PryntTrimmerView
+    - SteviaLayout
+    - YPImagePicker
+
+SPEC CHECKSUMS:
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
+  SteviaLayout: b1b56a932f7e199a963a8cf59de2f766a3112d58
+  YPImagePicker: bdaa46782668e260fdd9709f19043a9f469fd2ad
+
+PODFILE CHECKSUM: d145651ab83c821b269eadc89c2783d36670c136
+
+COCOAPODS: 1.8.1
