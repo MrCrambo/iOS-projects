@@ -45,3 +45,6 @@ There is no code to Flask server and no link to server on app code.
 - 3 hours.
 
 <img width="291" alt="Снимок экрана 2019-10-03 в 13 37 51" src="https://user-images.githubusercontent.com/14878297/66120365-5f41de80-e5e3-11e9-9dcd-74ec060894ec.png">
+
+## 4. Stack View with shadow and rounded corners
+
