@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Rv-fH-Uo2" customClass="ShadowView" customModule="CardViewUI" customModuleProvider="target">
-                                <rect key="frame" x="60" y="164" width="294" height="548"/>
+                                <rect key="frame" x="60" y="144" width="294" height="588"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqd-A7-cEc">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="548"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="588"/>
                                         <subviews>
                                             <stackView autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V4Q-C7-6Xr">
-                                                <rect key="frame" x="0.0" y="0.0" width="294" height="528"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="568"/>
                                                 <subviews>
                                                     <imageView autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYM-fd-vha">
-                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="452"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="492"/>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J6f-dn-8in">
-                                                        <rect key="frame" x="0.0" y="472" width="294" height="56"/>
+                                                        <rect key="frame" x="0.0" y="512" width="294" height="56"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cye-qr-uj6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="18"/>
@@ -101,12 +101,18 @@
                                     <constraint firstAttribute="trailing" secondItem="aqd-A7-cEc" secondAttribute="trailing" id="yAv-mv-5br"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwT-0s-fU3">
+                                <rect key="frame" x="152.66666666666666" y="752" width="108.99999999999997" height="30"/>
+                                <state key="normal" title="Choose a photo"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7Rv-fH-Uo2" firstAttribute="leading" secondItem="m4E-Z2-Ces" secondAttribute="leadingMargin" constant="40" id="6dR-I7-fqu"/>
+                            <constraint firstItem="GwT-0s-fU3" firstAttribute="centerX" secondItem="m4E-Z2-Ces" secondAttribute="centerX" id="9sC-F2-MZS"/>
+                            <constraint firstItem="GwT-0s-fU3" firstAttribute="top" secondItem="7Rv-fH-Uo2" secondAttribute="bottom" constant="20" id="b7d-8S-Qfl"/>
                             <constraint firstItem="7Rv-fH-Uo2" firstAttribute="centerY" secondItem="m4E-Z2-Ces" secondAttribute="centerY" constant="-10" id="mmN-sz-8oD"/>
-                            <constraint firstItem="7Rv-fH-Uo2" firstAttribute="top" secondItem="m4E-Z2-Ces" secondAttribute="topMargin" constant="120" id="nKz-qf-eC8"/>
+                            <constraint firstItem="7Rv-fH-Uo2" firstAttribute="top" secondItem="m4E-Z2-Ces" secondAttribute="topMargin" constant="100" id="nKz-qf-eC8"/>
                             <constraint firstItem="7Rv-fH-Uo2" firstAttribute="centerX" secondItem="m4E-Z2-Ces" secondAttribute="centerX" id="wYt-Cw-1fT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yC2-j2-vvK"/>
