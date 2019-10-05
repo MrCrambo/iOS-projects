@@ -14,7 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
     }
     
 }
@@ -38,7 +37,6 @@ final class CustomButton: UIButton {
             shadowLayer.shadowRadius = 2
 
             layer.insertSublayer(shadowLayer, at: 0)
-            //layer.insertSublayer(shadowLayer, below: nil) // also works
         }
     }
 
