@@ -22,6 +22,8 @@ final class CustomButton: UIButton {
 
     private var shadowLayer: CAShapeLayer!
 
+    // new Button class with shadow and corners, also here is adding background color
+    
     override func layoutSubviews() {
         super.layoutSubviews()
 
@@ -35,7 +37,6 @@ final class CustomButton: UIButton {
             shadowLayer.shadowOffset = CGSize(width: 0, height: 0)
             shadowLayer.shadowOpacity = 0.3
             shadowLayer.shadowRadius = 2
-
             layer.insertSublayer(shadowLayer, at: 0)
         }
     }
@@ -44,6 +45,8 @@ final class CustomButton: UIButton {
 
 class ShadowView: UIView {
 
+    // new UIView class with shadows, used in storyboard
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.layer.masksToBounds = false
