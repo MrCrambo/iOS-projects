@@ -13,8 +13,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       }
+        
+        
+    }
     
+}
+
+final class CustomButton: UIButton {
+
+    private var shadowLayer: CAShapeLayer!
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 14).cgPath
+            shadowLayer.fillColor = UIColor(red: 30.0/255.0, green: 150.0/255.0, blue: 233.0/255.0, alpha: 1.0).cgColor
+
+            shadowLayer.shadowColor = UIColor.darkGray.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: 0, height: 0)
+            shadowLayer.shadowOpacity = 0.3
+            shadowLayer.shadowRadius = 2
+
+            layer.insertSublayer(shadowLayer, at: 0)
+            //layer.insertSublayer(shadowLayer, below: nil) // also works
+        }
+    }
+
 }
 
 class ShadowView: UIView {
