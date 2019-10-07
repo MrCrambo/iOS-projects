@@ -10,10 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        // making image view circle
+        imageView.layer.borderWidth = 4.0
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.cornerRadius = imageView.frame.size.height / 2
+        imageView.clipsToBounds = true
     }
     
 }
