@@ -7,21 +7,47 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-        // making image view circle
+        // making image view circled
         imageView.layer.borderWidth = 4.0
         imageView.layer.masksToBounds = false
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.cornerRadius = imageView.frame.size.height / 2
         imageView.clipsToBounds = true
+    }
+    @IBAction func choosePhoto(_ sender: Any) {
+        // using ImagePicker pods library for instagram like picker without video
+        
+        var config = YPImagePickerConfiguration()
+        config.usesFrontCamera = true
+        config.onlySquareImagesFromCamera = false
+        config.showsPhotoFilters = false
+        config.screens = [.library, .photo]
+        config.startOnScreen = YPPickerScreen.library
+        config.library.maxNumberOfItems = 1
+        config.library.minNumberOfItems = 1
+        config.library.mediaType = YPlibraryMediaType.photo
+        
+        let picker = YPImagePicker(configuration: config)
+        
+        picker.didFinishPicking { [unowned picker] items, _ in
+            if let photo = items.singlePhoto {
+                self.imageView.image = photo.image
+            }
+            picker.dismiss(animated: true, completion: nil)
+            
+            //self.uploadImage(img: self.imageView.image!)
+        }
+        present(picker, animated: true, completion: nil)
     }
     
 }
