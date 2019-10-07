@@ -13,9 +13,12 @@
 		8629D6D12347CBBF00560B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8629D6CF2347CBBF00560B88 /* Main.storyboard */; };
 		8629D6D32347CBC100560B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8629D6D22347CBC100560B88 /* Assets.xcassets */; };
 		8629D6D62347CBC100560B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8629D6D42347CBC100560B88 /* LaunchScreen.storyboard */; };
+		9007BD23442FF0FF6F2813AD /* Pods_CardViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E684337389BF57CE99C5612 /* Pods_CardViewUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B44A1B9CBFE53FFBBC20BB6 /* Pods-CardViewUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardViewUI.debug.xcconfig"; path = "Target Support Files/Pods-CardViewUI/Pods-CardViewUI.debug.xcconfig"; sourceTree = "<group>"; };
+		5E684337389BF57CE99C5612 /* Pods_CardViewUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardViewUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8629D6C62347CBBF00560B88 /* CardViewUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardViewUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8629D6C92347CBBF00560B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8629D6CB2347CBBF00560B88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		8629D6D22347CBC100560B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8629D6D52347CBC100560B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8629D6D72347CBC100560B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E74DD2C3C19435D63EA60D3C /* Pods-CardViewUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardViewUI.release.xcconfig"; path = "Target Support Files/Pods-CardViewUI/Pods-CardViewUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9007BD23442FF0FF6F2813AD /* Pods_CardViewUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		345CC6DF51393F3FD6FD12AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E684337389BF57CE99C5612 /* Pods_CardViewUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8629D6BD2347CBBE00560B88 = {
 			isa = PBXGroup;
 			children = (
 				8629D6C82347CBBF00560B88 /* CardViewUI */,
 				8629D6C72347CBBF00560B88 /* Products */,
+				8CEC24B67747E990E4ADD4EB /* Pods */,
+				345CC6DF51393F3FD6FD12AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = CardViewUI;
 			sourceTree = "<group>";
 		};
+		8CEC24B67747E990E4ADD4EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B44A1B9CBFE53FFBBC20BB6 /* Pods-CardViewUI.debug.xcconfig */,
+				E74DD2C3C19435D63EA60D3C /* Pods-CardViewUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8629D6DA2347CBC100560B88 /* Build configuration list for PBXNativeTarget "CardViewUI" */;
 			buildPhases = (
+				DF6809F13F93DD08E1CEBA0A /* [CP] Check Pods Manifest.lock */,
 				8629D6C22347CBBE00560B88 /* Sources */,
 				8629D6C32347CBBE00560B88 /* Frameworks */,
 				8629D6C42347CBBE00560B88 /* Resources */,
+				A4A5817F60D9137C9B5D6DC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4A5817F60D9137C9B5D6DC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardViewUI/Pods-CardViewUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CardViewUI/Pods-CardViewUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardViewUI/Pods-CardViewUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF6809F13F93DD08E1CEBA0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardViewUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8629D6C22347CBBE00560B88 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		8629D6DB2347CBC100560B88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B44A1B9CBFE53FFBBC20BB6 /* Pods-CardViewUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		8629D6DC2347CBC100560B88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E74DD2C3C19435D63EA60D3C /* Pods-CardViewUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
