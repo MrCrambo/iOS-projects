@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.cornerRadius = imageView.frame.size.height / 2
         imageView.clipsToBounds = true
+        imageView.isHidden = true
     }
     @IBAction func choosePhoto(_ sender: Any) {
         // using ImagePicker pods library for instagram like picker without video
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
         
         picker.didFinishPicking { [unowned picker] items, _ in
             if let photo = items.singlePhoto {
+                self.imageView.isHidden = false
                 self.imageView.image = photo.image
             }
             picker.dismiss(animated: true, completion: nil)
@@ -63,7 +65,7 @@ final class CustomButton: UIButton {
 
         if shadowLayer == nil {
             shadowLayer = CAShapeLayer()
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 14).cgPath
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 18).cgPath
             shadowLayer.fillColor = UIColor(red: 30.0/255.0, green: 150.0/255.0, blue: 233.0/255.0, alpha: 1.0).cgColor
 
             shadowLayer.shadowColor = UIColor.darkGray.cgColor
