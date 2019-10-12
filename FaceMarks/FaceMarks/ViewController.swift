@@ -7,31 +7,42 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var firstPhoto: UIImageView!
-    @IBOutlet weak var secondPhoto: UIImageView!
+    @IBOutlet weak var chosenImage: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        firstPhoto.isUserInteractionEnabled = true
-        firstPhoto.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(firstImageTapped(_:))))
         
-        secondPhoto.isUserInteractionEnabled = true
-        secondPhoto.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secondImageTapped(_:))))
     }
 
-    @objc private func firstImageTapped(_ recognizer: UITapGestureRecognizer) {
-        print("first image tapped")
+    @IBAction func clickButton(_ sender: Any) {
+        // using ImagePicker pods library for instagram like picker without video
+        var config = YPImagePickerConfiguration()
+        config.usesFrontCamera = true
+        config.onlySquareImagesFromCamera = false
+        config.showsPhotoFilters = false
+        config.screens = [.library, .photo]
+        config.startOnScreen = YPPickerScreen.library
+        config.library.maxNumberOfItems = 1
+        config.library.minNumberOfItems = 1
+        config.library.mediaType = YPlibraryMediaType.photo
+        
+        let picker = YPImagePicker(configuration: config)
+        
+        picker.didFinishPicking { [unowned picker] items, _ in
+            if let photo = items.singlePhoto {
+                self.chosenImage.image = photo.image
+            }
+            picker.dismiss(animated: true, completion: nil)
+            
+        }
+        present(picker, animated: true, completion: nil)
     }
-    
-    @objc private func secondImageTapped(_ recognizer: UITapGestureRecognizer) {
-        print("second image tapped")
-    }
-
 }
 
