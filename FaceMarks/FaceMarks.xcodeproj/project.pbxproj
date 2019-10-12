@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		737583B92A6CB797E260ED11 /* Pods_FaceMarks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FE012EFE9DB9550F77A6BC /* Pods_FaceMarks.framework */; };
 		86712A7E2350E8BE008EF6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86712A7D2350E8BD008EF6CA /* AppDelegate.swift */; };
 		86712A802350E8BE008EF6CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86712A7F2350E8BE008EF6CA /* SceneDelegate.swift */; };
 		86712A822350E8BE008EF6CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86712A812350E8BE008EF6CA /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		86712A862350E8BF008EF6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86712A892350E8BF008EF6CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86712A8B2350E8BF008EF6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93FE012EFE9DB9550F77A6BC /* Pods_FaceMarks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceMarks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3681BB30A51CD7FD89AFD44 /* Pods-FaceMarks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceMarks.release.xcconfig"; path = "Target Support Files/Pods-FaceMarks/Pods-FaceMarks.release.xcconfig"; sourceTree = "<group>"; };
+		F6CA12E9269EAD07ED42B8B6 /* Pods-FaceMarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceMarks.debug.xcconfig"; path = "Target Support Files/Pods-FaceMarks/Pods-FaceMarks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737583B92A6CB797E260ED11 /* Pods_FaceMarks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D93807BEF1C4DE43F425C5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93FE012EFE9DB9550F77A6BC /* Pods_FaceMarks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FC82C2BEE6686BA7AF46977 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6CA12E9269EAD07ED42B8B6 /* Pods-FaceMarks.debug.xcconfig */,
+				A3681BB30A51CD7FD89AFD44 /* Pods-FaceMarks.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		86712A712350E8BD008EF6CA = {
 			isa = PBXGroup;
 			children = (
 				86712A7C2350E8BD008EF6CA /* FaceMarks */,
 				86712A7B2350E8BD008EF6CA /* Products */,
+				6FC82C2BEE6686BA7AF46977 /* Pods */,
+				0D93807BEF1C4DE43F425C5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86712A8E2350E8BF008EF6CA /* Build configuration list for PBXNativeTarget "FaceMarks" */;
 			buildPhases = (
+				01D129583F301C8563D61226 /* [CP] Check Pods Manifest.lock */,
 				86712A762350E8BD008EF6CA /* Sources */,
 				86712A772350E8BD008EF6CA /* Frameworks */,
 				86712A782350E8BD008EF6CA /* Resources */,
+				927BB62FD6DDEF2252930C25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01D129583F301C8563D61226 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceMarks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		927BB62FD6DDEF2252930C25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceMarks/Pods-FaceMarks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceMarks/Pods-FaceMarks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceMarks/Pods-FaceMarks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86712A762350E8BD008EF6CA /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		86712A8F2350E8BF008EF6CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6CA12E9269EAD07ED42B8B6 /* Pods-FaceMarks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +364,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mrcrambo.FaceMarks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		86712A902350E8BF008EF6CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3681BB30A51CD7FD89AFD44 /* Pods-FaceMarks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mrcrambo.FaceMarks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
