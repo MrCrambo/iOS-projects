@@ -42,6 +42,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstPhoto" destination="sYQ-Yg-xTJ" id="RCw-zS-gIb"/>
+                        <outlet property="secondPhoto" destination="hrQ-YA-wvw" id="Nrg-t6-mVI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
