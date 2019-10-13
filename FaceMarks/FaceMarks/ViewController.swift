@@ -43,7 +43,7 @@ class ViewController: UIViewController {
                 self.chosenImage.image = photo.image
                 self.image = photo.image
                 
-                
+                self.findFaceLandmarks()
             }
             picker.dismiss(animated: true, completion: nil)
             
@@ -84,7 +84,8 @@ class ViewController: UIViewController {
         }
 
         for face in observations {
-            print(face.landmarks ?? 0)
+            print(face.landmarks?.allPoints?.normalizedPoints ?? 0)
+            print(face.landmarks?.medianLine)
         }
     }
 }
