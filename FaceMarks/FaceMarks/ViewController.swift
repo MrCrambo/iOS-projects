@@ -22,10 +22,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        chosenImage.isUserInteractionEnabled = true
+        chosenImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(firstImageTapped(_:))))
+    }
+    
+    @objc private func firstImageTapped(_ recognizer: UITapGestureRecognizer) {
+        print("first image tapped")
+        callPicker()
     }
 
     @IBAction func clickButton(_ sender: Any) {
+        callPicker()
+    }
+    
+    func callPicker(){
         // using ImagePicker pods library for instagram like picker without video
         var config = YPImagePickerConfiguration()
         config.usesFrontCamera = true
@@ -343,8 +353,6 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
 
         chosenImage.image = finalImage
-        
-        print(faceLandmarkPoints)
     }
 }
 
